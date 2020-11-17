@@ -1,6 +1,33 @@
 <html>
 <head>
 <title>Forumul pasionatilor de masini</title>
+  <script>
+      if (document.addEventListener) {
+    document.addEventListener("DOMContentLoaded", function () {
+        loaded();
+    });
+} else if (document.attachEvent) {
+    document.attachEvent("onreadystatechange", function () {
+        loaded();
+    });
+}
+
+function loaded() {
+
+    setInterval(loop, 350);
+
+}
+
+var x = 0;
+
+var titleText = ["F", "Fo", "For", "Foru", "Forum", "Forumu", "Forumul", "Forumul p", "Forumul pa", "Forumul pas", "Forumul pasi", "Forumul pasio", "Forumul pasion", "Forumul pasiona", "Forumul pasionat", "Forumul pasionati", "Forumul pasionatil", "Forumul pasionatilo", "Forumul pasionatilor", "Forumul pasionatilor d", "Forumul pasionatilor de", "Forumul pasionatilor de m", "Forumul pasionatilor de ma", "Forumul pasionatilor de mas", "Forumul pasionatilor de masi", "Forumul pasionatilor de masin", "Forumul pasionatilor de masini",];
+
+function loop() {
+
+    document.getElementsByTagName("title")[0].innerHTML = titleText[x++ % titleText.length];
+
+}
+      </script>
 <style>
 h1 {text-align:center;}
 p {font-size:22px;}
